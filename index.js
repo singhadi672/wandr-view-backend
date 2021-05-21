@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const DBConnection = require("./DB/DBConnection");
-const PORT = 4000;
+const port = 4000;
 const videoRouter = require("./Routes/video.router");
 const likedVideoRouter = require("./Routes/likedVideos.router");
 const watchLaterRouter = require("./Routes/watchLater.router");
@@ -25,6 +25,6 @@ app.use("/playlist", playlistRouter);
 app.get("/", async (req, res) => {
   res.send("video-library backend Copyright-Aditya Singh");
 });
-app.listen(process.env.PORT || PORT, () => {
-  console.log(`server started on port ${PORT}`);
+app.listen(process.env.PORT || port, () => {
+  console.log(`server started on port ${port}`);
 });
