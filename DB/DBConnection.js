@@ -3,12 +3,12 @@ const dotenv = require("dotenv");
 dotenv.config();
 const DB_USERNAME = process.env.mongoDBUsername;
 const DB_PASSWORD = process.env.mongoDBPassword;
-const dbName = process.env.dbName;
+const dbName = "video-library";
 
 async function DBConnection() {
   try {
     await mongoose.connect(
-      `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@neog-cluster.d8w2z.mongodb.net/${dbName}`,
+      `mongodb+srv://MongoDbUser:aditya1997@neog-cluster.d8w2z.mongodb.net/${dbName}`,
       { useNewUrlParser: true, useUnifiedTopology: true }
     );
 
