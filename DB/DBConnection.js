@@ -1,8 +1,4 @@
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-dotenv.config();
-const DB_USERNAME = process.env.mongoDBUsername;
-const DB_PASSWORD = process.env.mongoDBPassword;
 const dbName = "video-library";
 
 async function DBConnection() {

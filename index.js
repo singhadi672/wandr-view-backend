@@ -26,5 +26,5 @@ app.get("/", async (req, res) => {
   res.send("video-library backend Copyright-Aditya Singh");
 });
 app.listen(process.env.PORT || port, () => {
-  console.log(`server started....`);
+  console.log(`server started`);
 });
