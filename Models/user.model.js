@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
+  username: String,
+  email: String,
+  password: String,
   likedVideos: [{ type: mongoose.Schema.Types.ObjectId, ref: "Video" }],
   playlist: [
     {
@@ -15,8 +18,6 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model("User", UserSchema);
 
 module.exports = { User };
-
-
 
 // async function dasa() {
 //   const { _id } = await Video.findOne();

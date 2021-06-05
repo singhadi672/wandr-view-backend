@@ -3,7 +3,8 @@ const router = express.Router();
 const { User } = require("../Models/user.model");
 
 router.route("/").get(async (req, res) => {
-  const data = await User.findOne()
+  const { userID } = req.user;
+  const data = await User.findById(userID)
     .populate("likedVideos")
     .populate("watchLater")
     .populate("history")
