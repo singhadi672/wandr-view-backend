@@ -35,7 +35,7 @@ router
         }
       }
     } catch (err) {
-      res.status(500).json({ success: false, errmessage: err });
+      res.status(500).json({ success: false, errMessage: err });
     }
   });
 
