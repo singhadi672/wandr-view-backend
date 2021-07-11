@@ -14,7 +14,7 @@ router
     try {
       const newVideo = req.body;
       if (newVideo.clear) {
-        const response = await User.updateOne({ id: userID, history: [] });
+        const response = await User.updateOne({ _id: userID }, { history: [] });
         res.status(204).json({ success: true, message: "history cleared" });
       } else {
         let { history } = await User.findById(userID);
