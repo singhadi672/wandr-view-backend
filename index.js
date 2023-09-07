@@ -22,9 +22,10 @@ DBConnection();
 
 // getData();
 
-app.use("/signup", signupRouter);
-app.use("/login", loginRouter);
 app.use("/videos", videoRouter);
+
+// app.use("/signup", signupRouter);
+// app.use("/login", loginRouter);
 // app.use(checkAuth);
 // app.use("/users",checkAuth, UserRouter);
 // app.use("/liked-videos",checkAuth, likedVideoRouter);
