@@ -26,11 +26,11 @@ app.use("/signup", signupRouter);
 app.use("/login", loginRouter);
 app.use("/videos", videoRouter);
 // app.use(checkAuth);
-app.use("/users", UserRouter);
-app.use("/liked-videos", likedVideoRouter);
-app.use("/watch-later", watchLaterRouter);
-app.use("/history", historyRouter);
-app.use("/playlist", playlistRouter);
+app.use("/users",checkAuth, UserRouter);
+app.use("/liked-videos",checkAuth, likedVideoRouter);
+app.use("/watch-later",checkAuth, watchLaterRouter);
+app.use("/history",checkAuth, historyRouter);
+app.use("/playlist", checkAuth,playlistRouter);
 
 app.get("/", async (req, res) => {
   res.send("video-library backend Copyright-Aditya Singh");
