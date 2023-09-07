@@ -4,8 +4,7 @@ const dbName = "video-library";
 async function DBConnection() {
   try {
     await mongoose.connect(
-      `mongodb+srv://MongoDbUser:aditya1997@neog-cluster.d8w2z.mongodb.net/${dbName}`,
-      { useNewUrlParser: true, useUnifiedTopology: true }
+      `mongodb+srv://MongoDbUser:aditya1997@neog-cluster.d8w2z.mongodb.net/${dbName}?retryWrites=true&w=majority`
     );
 
     console.log(`successfully connected to DB ${dbName}`);
