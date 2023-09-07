@@ -20,10 +20,12 @@ app.use(cors());
 
 DBConnection();
 
+// getData();
+
 app.use("/signup", signupRouter);
 app.use("/login", loginRouter);
 app.use("/videos", videoRouter);
-app.use(checkAuth);
+// app.use(checkAuth);
 app.use("/users", UserRouter);
 app.use("/liked-videos", likedVideoRouter);
 app.use("/watch-later", watchLaterRouter);
