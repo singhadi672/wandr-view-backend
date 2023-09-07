@@ -3,7 +3,8 @@ const { User } = require("../Models/user.model");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const secret = process.env.secret;
+const secret = 'cj2A4RjTiikf83QMpiOZ+qYvvAQNJMLtzjn90O8j6ApJtcdS18JCminhrjgTpCKEKRzbNSxqYln+0sPiM92gscVJymz6jjHtM9H+SrhVbPzi1tmtbhYxxY3tMnkrWk0vlxmW3kby04H/T7xhx7OtRH2aECV1iG9v6DeSjkfFJh05XVzdfThgcmT6BIq7l2XOUor8gtVmg+tcXWQmwvOK5vpifbWO/Sw8eO659wDVF4X5wpIKPgXqn96SBFFOwb3PWpFLRQTZSgBOP0hwEPKICFOPaCpcXVtu978uez/3YVWNc0Yir1BMSzEt8qs8gfimm339KIGs0p7D9zkWLiuUrg=='
+const saltRounds = 10
 
 router.route("/").post(async (req, res) => {
   const { email, password } = req.body;
